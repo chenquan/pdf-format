@@ -19,6 +19,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/atotto/clipboard"
 	"github.com/spf13/cobra"
 )
 
@@ -34,6 +35,13 @@ var rootCmd = &cobra.Command{
 		text, err := flags.GetString("text")
 		if err != nil {
 			return err
+		}
+
+		if text == "" {
+			text, err = clipboard.ReadAll()
+			if err != nil {
+				return err
+			}
 		}
 
 		text = strings.ReplaceAll(text, " ", "")
