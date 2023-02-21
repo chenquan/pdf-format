@@ -70,6 +70,5 @@ func init() {
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	rootCmd.Flags().StringP("text", "t", "", "Text copied from PDF.")
-
+	rootCmd.Flags().StringP("text", "t", "", "Text copied from PDF. Get content from clipboard by default.")
 }
