@@ -37,7 +37,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		text = strings.ReplaceAll(text, " ", "")
-		text = strings.ReplaceAll(text, "\n\n", "\n")
+		text = strings.ReplaceAll(text, "\n", "")
 
 		fmt.Printf("\n%s\n", text)
 		return nil
