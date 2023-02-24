@@ -4,7 +4,7 @@ on:
     types: [created]
 jobs:
   releases-matrix:
-    name: Release diskusage binary
+    name: Release pdf-format binary
     runs-on: ubuntu-latest
     strategy:
       matrix:
